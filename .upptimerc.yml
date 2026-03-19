@@ -26,8 +26,8 @@ status-website:
   cname: status.dawncv.space
   # baseUrl: /your-repo-name
   theme: light
-  logoUrl: /dawncv-status-mark.svg
-  faviconSvg: /dawncv-status-mark.svg
+  logoUrl: https://raw.githubusercontent.com/YuhangNie/cfmail-status/master/assets/dawncv-status-mark.svg
+  faviconSvg: https://raw.githubusercontent.com/YuhangNie/cfmail-status/master/assets/dawncv-status-mark.svg
   name: DawnCV Status
   introTitle: "Temporary Email Service Health"
   introMessage: Live availability, latency trends, and incident history for the public mailbox UI and edge API.
