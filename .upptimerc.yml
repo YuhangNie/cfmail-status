@@ -471,8 +471,12 @@ status-website:
       border: 0;
       border-left-width: 0 !important;
       border-radius: 0;
-      background: transparent;
+      background: var(--card-background-color) !important;
+      background-image: none !important;
+      background-size: auto !important;
+      background-repeat: no-repeat !important;
       padding: 1rem 1.25rem;
+      overflow: hidden;
       --bar-width: 100%;
       --bar-fill-color: #18a058;
     }
