@@ -147,8 +147,8 @@ status-website:
     }
 
     .container {
-      max-width: 718px;
-      padding: 0 1.25rem;
+      max-width: 1180px;
+      padding: 0 2rem;
     }
 
     nav {
@@ -163,30 +163,34 @@ status-website:
     }
 
     nav .container {
-      min-height: 3.4rem;
-      gap: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 4.1rem;
+      gap: 1.5rem;
     }
 
     nav .logo {
       display: inline-flex;
       align-items: center;
-      gap: 0.7rem;
-      font-size: 0.95rem;
+      gap: 0.72rem;
+      font-size: 0.92rem;
       font-weight: 650;
       letter-spacing: -0.02em;
     }
 
     nav .logo img {
-      width: 1.35rem;
-      height: 1.35rem;
+      width: 1.45rem;
+      height: 1.45rem;
       padding: 0;
       border: 0;
-      border-radius: 0.3rem;
+      border-radius: 0.34rem;
       background: transparent;
       box-shadow: none;
     }
 
     nav ul {
+      margin-left: auto;
       gap: 1.25rem;
     }
 
@@ -230,6 +234,8 @@ status-website:
     }
 
     main.container {
+      max-width: 718px;
+      margin: 0 auto;
       padding-top: 1.35rem;
       padding-bottom: 4rem;
     }
@@ -716,6 +722,7 @@ status-website:
       }
 
       nav .container {
+        width: calc(100% - 2rem);
         min-height: auto;
         padding-top: 0.85rem;
         padding-bottom: 0.85rem;
