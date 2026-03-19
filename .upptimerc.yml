@@ -60,6 +60,8 @@ status-website:
       --tag-down-background-color: #dc2626;
       --tag-degraded-background-color: #d97706;
       --change-background-color: rgba(17, 24, 39, 0.05);
+      --bar-track-color: rgba(17, 24, 39, 0.08);
+      --bar-divider-color: rgba(255, 255, 255, 0.92);
       --error-button-border-color: #111827;
       --error-button-background-color: #111827;
       --error-button-color: #ffffff;
@@ -88,6 +90,8 @@ status-website:
         --tag-down-background-color: #be123c;
         --tag-degraded-background-color: #b45309;
         --change-background-color: rgba(148, 163, 184, 0.08);
+        --bar-track-color: rgba(148, 163, 184, 0.14);
+        --bar-divider-color: rgba(13, 17, 23, 0.9);
         --error-button-border-color: #e2e8f0;
         --error-button-background-color: #e2e8f0;
         --error-button-color: #0b1020;
@@ -456,14 +460,19 @@ status-website:
     section.live-status article {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
-      grid-template-rows: auto auto;
-      gap: 0.28rem 1.25rem;
+      grid-template-areas:
+        "title uptime"
+        "bar bar"
+        "latency latency";
+      gap: 0.42rem 1.25rem;
       min-height: 100%;
       border: 0;
       border-left-width: 0 !important;
       border-radius: 0;
       background: transparent;
       padding: 1rem 1.25rem;
+      --bar-width: 100%;
+      --bar-fill-color: #10936f;
     }
 
     section.live-status article + article {
@@ -472,7 +481,7 @@ status-website:
     }
 
     section.live-status article h4 {
-      grid-row: 1 / span 2;
+      grid-area: title;
       display: flex;
       align-items: center;
       gap: 0.65rem;
@@ -509,9 +518,19 @@ status-website:
       box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.14);
     }
 
+    section.live-status article.degraded {
+      --bar-width: 68%;
+      --bar-fill-color: #d97706;
+    }
+
     section.live-status article.down h4::before {
       background: #dc2626;
       box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.12);
+    }
+
+    section.live-status article.down {
+      --bar-width: 24%;
+      --bar-fill-color: #dc2626;
     }
 
     section.live-status article img,
@@ -521,12 +540,44 @@ status-website:
       display: none !important;
     }
 
+    section.live-status article::after {
+      content: "";
+      grid-area: bar;
+      display: block;
+      width: 100%;
+      height: 0.9rem;
+      border-radius: 999px;
+      box-shadow: inset 0 0 0 1px rgba(17, 24, 39, 0.04);
+      background:
+        repeating-linear-gradient(
+          90deg,
+          transparent 0 16px,
+          var(--bar-divider-color) 16px 18px
+        ),
+        linear-gradient(
+          90deg,
+          var(--bar-fill-color) 0 var(--bar-width),
+          var(--bar-track-color) var(--bar-width) 100%
+        );
+      overflow: hidden;
+    }
+
     section.live-status article > div {
-      justify-self: end;
       color: var(--muted-text-color);
       font-size: 0.84rem;
       white-space: nowrap;
       text-align: right;
+    }
+
+    section.live-status article > div:first-of-type {
+      grid-area: uptime;
+      justify-self: end;
+    }
+
+    section.live-status article > div:last-of-type {
+      grid-area: latency;
+      justify-self: start;
+      text-align: left;
     }
 
     section.live-status article > div .data {
@@ -693,16 +744,20 @@ status-website:
 
       section.live-status article {
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-areas:
+          "title"
+          "uptime"
+          "bar"
+          "latency";
         gap: 0.45rem;
       }
 
       section.live-status article h4 {
-        grid-row: auto;
         flex-wrap: wrap;
       }
 
-      section.live-status article > div {
+      section.live-status article > div:first-of-type,
+      section.live-status article > div:last-of-type {
         justify-self: start;
         text-align: left;
         white-space: normal;
