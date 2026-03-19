@@ -1,6 +1,6 @@
 [
   {
-    "name": "Frontend",
+    "name": "Mailbox UI",
     "url": "https://mail.dawncv.space",
     "icon": "https://icons.duckduckgo.com/ip3/mail.dawncv.space.ico",
     "slug": "frontend",
@@ -10,15 +10,15 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 298,
-    "timeDay": 298,
-    "timeWeek": 298,
-    "timeMonth": 298,
-    "timeYear": 298,
+    "time": 310,
+    "timeDay": 310,
+    "timeWeek": 310,
+    "timeMonth": 310,
+    "timeYear": 310,
     "dailyMinutesDown": {}
   },
   {
-    "name": "API Health",
+    "name": "API Edge",
     "url": "https://api.dawncv.space/health_check",
     "icon": "https://icons.duckduckgo.com/ip3/api.dawncv.space.ico",
     "slug": "api-health",
@@ -28,11 +28,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 62,
-    "timeDay": 62,
-    "timeWeek": 62,
-    "timeMonth": 62,
-    "timeYear": 62,
+    "time": 228,
+    "timeDay": 228,
+    "timeWeek": 228,
+    "timeMonth": 228,
+    "timeYear": 228,
     "dailyMinutesDown": {}
   }
 ]
