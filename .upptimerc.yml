@@ -9,7 +9,7 @@ sites:
     url: https://mail.dawncv.space
   - name: API Edge
     slug: api-health
-    url: https://api.dawncv.space/health_check
+    url: https://apimail.dawncv.space/health_check
   # - name: Hacker News
   #   url: https://news.ycombinator.com
   # - name: Test Broken Site
@@ -42,7 +42,7 @@ status-website:
     - title: Mail
       href: https://mail.dawncv.space
     - title: API
-      href: https://api.dawncv.space/health_check
+      href: https://apimail.dawncv.space/health_check
   css: |
     :root {
       --body-background-color: #ffffff;
