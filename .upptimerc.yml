@@ -6,10 +6,10 @@ user-agent: YuhangNie
 sites:
   - name: Mailbox UI
     slug: frontend
-    url: https://mail.dawncv.space
+    url: https://mail.cliproxyapi.xyz
   - name: API Edge
     slug: api-health
-    url: https://apimail.dawncv.space/health_check
+    url: https://apimail.cliproxyapi.xyz/health_check
   # - name: Hacker News
   #   url: https://news.ycombinator.com
   # - name: Test Broken Site
@@ -23,7 +23,7 @@ sites:
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: status.dawncv.space
+  cname: status.cliproxyapi.xyz
   # baseUrl: /your-repo-name
   theme: light
   logoUrl: https://raw.githubusercontent.com/YuhangNie/cfmail-status/master/assets/logo.png
@@ -40,9 +40,9 @@ status-website:
     - title: Status
       href: /
     - title: Mail
-      href: https://mail.dawncv.space
+      href: https://mail.cliproxyapi.xyz
     - title: API
-      href: https://apimail.dawncv.space/health_check
+      href: https://apimail.cliproxyapi.xyz/health_check
   css: |
     :root {
       --body-background-color: #ffffff;

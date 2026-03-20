@@ -1,8 +1,8 @@
 [
   {
     "name": "Mailbox UI",
-    "url": "https://mail.dawncv.space",
-    "icon": "https://icons.duckduckgo.com/ip3/mail.dawncv.space.ico",
+    "url": "https://mail.cliproxyapi.xyz",
+    "icon": "https://icons.duckduckgo.com/ip3/mail.cliproxyapi.xyz.ico",
     "slug": "frontend",
     "status": "up",
     "uptime": "100.00%",
@@ -19,8 +19,8 @@
   },
   {
     "name": "API Edge",
-    "url": "https://apimail.dawncv.space/health_check",
-    "icon": "https://icons.duckduckgo.com/ip3/apimail.dawncv.space.ico",
+    "url": "https://apimail.cliproxyapi.xyz/health_check",
+    "icon": "https://icons.duckduckgo.com/ip3/apimail.cliproxyapi.xyz.ico",
     "slug": "api-health",
     "status": "up",
     "uptime": "100.00%",
