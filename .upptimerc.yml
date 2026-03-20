@@ -26,8 +26,8 @@ status-website:
   cname: status.cliproxyapi.xyz
   # baseUrl: /your-repo-name
   theme: light
-  logoUrl: https://raw.githubusercontent.com/YuhangNie/cfmail-status/master/assets/logo.png
-  favicon: https://raw.githubusercontent.com/YuhangNie/cfmail-status/master/assets/logo.png
+  logoUrl: https://mail.cliproxyapi.xyz/logo.png
+  favicon: https://mail.cliproxyapi.xyz/logo.png
   name: Temporary email
   introTitle: "System status"
   introMessage: Latest service status for the Temporary email platform.
@@ -173,24 +173,29 @@ status-website:
     nav .logo {
       display: inline-flex;
       align-items: center;
-      gap: 0.72rem;
+      gap: 0.88rem;
+      flex: 0 0 auto;
       line-height: 1;
       font-size: 0.92rem;
-      font-weight: 650;
+      font-weight: 700;
       letter-spacing: -0.02em;
+      white-space: nowrap;
     }
 
     nav .logo img {
       display: block;
-      width: 2rem;
-      height: 2rem;
-      flex: 0 0 2rem;
+      width: 2.45rem;
+      height: 2.45rem;
+      min-width: 2.45rem;
+      min-height: 2.45rem;
+      flex: 0 0 2.45rem;
       padding: 0;
       border: 0;
-      border-radius: 0.45rem;
+      border-radius: 0.72rem;
       background: transparent;
-      box-shadow: none;
-      object-fit: cover;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+      object-fit: contain;
+      object-position: center;
       aspect-ratio: 1 / 1;
     }
 
@@ -731,6 +736,18 @@ status-website:
         min-height: auto;
         padding-top: 0.85rem;
         padding-bottom: 0.85rem;
+      }
+
+      nav .logo {
+        gap: 0.72rem;
+      }
+
+      nav .logo img {
+        width: 2.2rem;
+        height: 2.2rem;
+        min-width: 2.2rem;
+        min-height: 2.2rem;
+        flex-basis: 2.2rem;
       }
 
       nav ul {
